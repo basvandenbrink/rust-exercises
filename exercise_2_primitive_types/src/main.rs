@@ -8,6 +8,10 @@ fn main() {
     println!("Hello, world! We have {}? {}", p, x);
 
     // Create an array of 5 integers and print all of them
+    let ints: [i32; 5] = [1, 2, 3, 4, 5];
+    println!("{:?}", ints);
 
     // Create tuple of 2 values and print the tuple
+    let tup = (5, 6);
+    println!("{:?}", tup);
 }

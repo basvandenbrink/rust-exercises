@@ -9,7 +9,7 @@
  pub mod d_calculate;
  
  use a_add_numbers::add_these_numbers;
-//  use b_sumvec::sumvec;
+use b_sumvec::sumvec;
 //  use c_divide::divide;
 
  
@@ -21,8 +21,8 @@
     );
 
     // Part 2, enable the following lines and fill in the function
-    // let sum = crate::sumvec(...);
-    // println!("Sum of the vector is {}", sum);
+    let sum = crate::sumvec(&vec![1, 2, 3]);
+    println!("Sum of the vector is {}", sum);
 
     // Part 3, enable the following lines and fill in the function
     // match divide(10.0, 2.0) {

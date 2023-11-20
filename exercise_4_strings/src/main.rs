@@ -25,22 +25,22 @@ fn main() {
 
 // Return a str with "wise!"
 fn wise_saying() -> &'static str {
-    todo!("Return a str")
+    "wise!"
 }
 
 // Return a String with "SomeWords"
 fn create_some_wise_words() -> String {
-    todo!("Return a String")
+    "SomeWords".to_string()
 }
 
 // Return concatenation of 'a + " " + b'
 fn string_welder(a: String, b: String) -> String {
-    todo!("Return string a + b with a space in between")
+    format!("{a} {b}")
 }
 
 // Return a str slice of the first 5 characters
 fn slice_first_five<'a>(s: &'a String) -> &'a str {
-    todo!("Return a slice of the first 5 characters")
+    &s[0..5]
 }
 
 #[cfg(test)]

@@ -6,7 +6,11 @@
 /// * `a` - The dividend of the operation
 /// * `b` - The divisor of the operation
 pub fn divide(a: f64, b: f64) -> Result<f64, &'static str> {
-    todo!("Implement a division that gives an error as mentioned above");
+    if b == 0.0 {
+        Err("Cannot divide by zero")
+    } else {
+        Ok(a / b)
+    }
 }
 
 /// Divide function adapted with a String error type. This method maps all errors into one known type
@@ -20,7 +24,11 @@ pub fn divide(a: f64, b: f64) -> Result<f64, &'static str> {
 /// * `a` - The dividend of the operation
 /// * `b` - The divisor of the operation
 pub fn divide_custom_error(a: f64, b: f64) -> Result<f64, String> {
-    todo!("Call divide(a,b) and prefix the error with 'Division error! '");
+    divide(a, b).map_err(prepend_error_string)
+}
+
+fn prepend_error_string(x: &str) -> String {
+    format!("Division error! {x}")
 }
 
 #[cfg(test)]
